@@ -72,4 +72,16 @@ img {
     width: 100%;
     height: 100%;
 }
-/* end - task 3 Gallery*/
+
+/*-----------task 04 -----------*/
+button[data-action='decrement'] {
+    background-color: blue;
+    width: 100px;
+    border-radius: 5px;
+}
+button[data-action='increment'] {
+    background-color: yellow;
+    width: 100px;
+    border-radius: 5px;
+}
+/*-----------task 05 -----------*/
