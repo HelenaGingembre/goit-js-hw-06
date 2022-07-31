@@ -3,15 +3,15 @@
 
 const images = [
   {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://travel-lovers.org/wp-content/uploads/2017/09/PlaceSaintSophie.jpg',
     alt: 'White and Black Long Fur Cat',
   },
   {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://travel-lovers.org/wp-content/uploads/2017/03/kamenets.jpg',
     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
   },
   {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    url: 'https://travel-lovers.org/wp-content/uploads/2018/01/kiev_handmadechocolate.jpg',
     alt: 'Group of Horses Running',
   },
 ];
