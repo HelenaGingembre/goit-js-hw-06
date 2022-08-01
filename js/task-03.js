@@ -23,17 +23,22 @@ const images = [
 const listGallery = document.querySelector(".gallery");
 
 //1- Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
-const markup = images
-  .map((image) => `<li class="grid__item">
-  <img class="grid__img" src=${image.url} alt=${image.alt}></li>`)
-  .join("");
+const markupGallery = images => {
+    return images.map((image) => {
+            return `<li class="grid__item">
+              <img class="grid__img" src=${image.url} alt=${image.alt}>
+              </li>`
+  }).join("");
+
+}
+const galleryImage = markupGallery(images);
 
 //2- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-listGallery.insertAdjacentHTML("beforeend", markup);
+listGallery.insertAdjacentHTML("beforeend", galleryImage);
 listGallery.insertAdjacentHTML("beforebegin", "<h2 class='gallery__title'>NEW Gallery</h2>");
-
+ 
 //3- Добавь минимальное оформление галереи флексбоксами или гридами через 
-//CSS классы.
+// //CSS классы.
 listGallery.classList.add("grid");
 
 

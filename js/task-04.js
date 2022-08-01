@@ -7,8 +7,7 @@ const refs = {
     counterValue: 0,
     decrementBtn: document.querySelector('button[data-action="decrement"]'),
     incrementBtn: document.querySelector('button[data-action="increment"]'),
-};
-
+};    
 
 // Обновляй интерфейс новым значением переменной counterValue.
 function updateCounterValue() {
