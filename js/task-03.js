@@ -24,9 +24,9 @@ const listGallery = document.querySelector(".gallery");
 
 //1- Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
 const markupGallery = images => {
-    return images.map((image) => {
+    return images.map(({url, alt}) => {
             return `<li class="grid__item">
-              <img class="grid__img" src=${image.url} alt=${image.alt}>
+              <img class="grid__img" src=${url} alt=${alt}>
               </li>`
   }).join("");
 
