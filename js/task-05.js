@@ -9,10 +9,10 @@ const refs = {
     outputEl: document.querySelector('#name-output'),
 }
 
- const onChangeInput = (event) =>{
-     refs.outputEl.textContent = event.currentTarget.value === ''
+ const onChangeInput = (inputEvent) =>{
+     refs.outputEl.textContent = inputEvent.currentTarget.value === ''
          ? 'Anonymus'
-         : event.currentTarget.value;
+         : inputEvent.currentTarget.value;
 }
 
 refs.inputEl.addEventListener('input', onChangeInput);
