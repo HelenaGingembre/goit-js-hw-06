@@ -14,23 +14,39 @@
 // на 10px.
 // Все элементы должены иметь случайный цвет фона в формате HEX.
 //Используй готовую функцию getRandomHexColor для получения цвета.
-
 // Создай функцию destroyBoxes(), которая очищает содержимое div#boxes,
 // тем самым удаляя все созданные элементы.
+
 const refs = {
   input: document.querySelector('input'),
   createBtn: document.querySelector('button[data-create]'),
   destroyBtn: document.querySelector('button[data-destroy]'),
   boxes: document.querySelector('#boxes'), 
 }
+refs.boxes.style.display = 'flex';
 refs.createBtn.addEventListener('click', onCreateBoxes);
 refs.destroyBtn.addEventListener('click', onDestroyBoxes);
 
 function onCreateBoxes() {
-  console.log('створено функція створення дивів');
-  boxes.append(document.createElement('div'));
+  const amount = Number(refs.input.value);
+  onCreateDivInBoxes(amount);
 }
 
+function onCreateDivInBoxes(amount) {
+  
+  const divArray = [];
+  const initialWidthDiv = 30;
+  for (let i = 0; i < amount; i += 1){
+    const newDivBoxes = document.createElement('div');
+    divArray.push(newDivBoxes);
+    newDivBoxes.style.width = `${initialWidthDiv + i * 10}px`;
+    newDivBoxes.style.height = newDivBoxes.style.width;
+    newDivBoxes.style.backgroundColor = getRandomHexColor();
+  };
+
+    refs.boxes.append(...divArray);
+  // refs.boxes.insertAdjacentHTML('afterbegin', ...divArray);
+}
 
 function onDestroyBoxes() {
   refs.boxes.innerHTML = '';
