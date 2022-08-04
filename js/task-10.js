@@ -28,11 +28,12 @@ refs.createBtn.addEventListener('click', onCreateBoxes);
 refs.destroyBtn.addEventListener('click', onDestroyBoxes);
 
 function onCreateBoxes() {
-  const amount = Number(refs.input.value);
-  onCreateDivInBoxes(amount);
+ 
+ const amount = Number(refs.input.value);
+  CreateBoxes(amount);
 }
 
-function onCreateDivInBoxes(amount) {
+function CreateBoxes(amount) {
   
   const divArray = [];
   const initialWidthDiv = 30;
