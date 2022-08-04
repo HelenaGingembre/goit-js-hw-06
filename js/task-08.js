@@ -24,13 +24,12 @@ function onFormSubmit(event) {
     if (email === '' || password === '') {
         return alert('Увага! Усі поля повинні бути заповнені.');
     }
+    const formData =      {
+        email: email,
+        password: password,
+    };
    
-    const formData = new FormData(event.currentTarget);
-           
-    formData.forEach((value, name) => {
-                console.log(`${name}: ${value}`);
-            })
-    
+    console.log(formData);
     event.currentTarget.reset(); // и очисти значения полей формы методом reset.
 }
 
