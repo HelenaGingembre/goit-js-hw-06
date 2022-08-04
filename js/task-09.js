@@ -13,11 +13,12 @@ refs.changeColorBtn.addEventListener('click', onChahgeBackgroundBody);
 
 function onChahgeBackgroundBody() {
   document.body.style.background = getRandomHexColor();
-  onOutputColor();
+  let color = document.body.style.background
+  onOutputColor(color);
 }
 
-function onOutputColor(){
-  refs.outputColor.textContent = getRandomHexColor();
+function onOutputColor(color){
+  refs.outputColor.textContent = color;
 };
 
 function getRandomHexColor() {
