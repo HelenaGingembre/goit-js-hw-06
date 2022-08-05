@@ -33,7 +33,7 @@ function onCreateBoxes() {
   CreateBoxes(amount);
 }
 
-function CreateBoxes(amount) {
+function createBoxes(amount) {
   
   const divArray = [];
   const initialWidthDiv = 30;
