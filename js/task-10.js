@@ -30,7 +30,7 @@ refs.destroyBtn.addEventListener('click', onDestroyBoxes);
 function onCreateBoxes() {
  
  const amount = Number(refs.input.value);
-  CreateBoxes(amount);
+  createBoxes(amount);
 }
 
 function createBoxes(amount) {
